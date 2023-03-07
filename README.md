@@ -1,15 +1,13 @@
-# 5 March 2023
-
-* DONE
-  * Everything until #10 of https://dahoum.wales/the-pacman-as-a-nursery-32ba07b282b1
-* Homework
-  * #9 learn the basics of CSS /done march 5th
-  * #10 learn how to show only part of the image of the spritesheet
-* Mantras 
-  * Pull before work
-  * Make small steps
-  
-  # 7 March 2023
+# 7 March 2023
 
  * DONE
-   * cut the spritesheet using internal CSS
+   * cut the spritesheet using internal CSS `marthige`
+   * a few small improvements to style and implementation `together`
+* Mantra
+  * Pull before work
+  * Make small steps
+* Homework
+  * Show the PacMan on top of the labyrinth
+  * Reseach and implement reading the keyboard
+  * Begin to think how to move the PacMan
+  * (We will animate with JavaScript)

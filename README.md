@@ -8,3 +8,8 @@
 * Mantras 
   * Pull before work
   * Make small steps
+  
+  # 6 March 2023
+
+  * DONE
+    * cut the spritesheet using internal CSS

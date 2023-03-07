@@ -3,5 +3,8 @@
 * DONE
   * Everything until #10 of https://dahoum.wales/the-pacman-as-a-nursery-32ba07b282b1
 * Homework
-  * #9 learn the basics of CSS
+  * #9 learn the basics of CSS /done march 5th
   * #10 learn how to show only part of the image of the spritesheet
+* Mantras 
+  * Pull before work
+  * Make small steps

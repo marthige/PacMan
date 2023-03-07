@@ -1,3 +1,5 @@
-body
-
-img
+#dottedmap {
+    width: 46px;
+    height: 44px;
+    background: url(spritesheet.png) 0 0;
+  }

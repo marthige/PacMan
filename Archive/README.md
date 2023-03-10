@@ -7,7 +7,6 @@
   * Pull before work
   * Make small steps
 * Homework
-  * Show the PacMan on top of the labyrinth
   * Reseach and implement reading the keyboard
   * Begin to think how to move the PacMan
   * (We will animate with JavaScript)

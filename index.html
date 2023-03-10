@@ -1,14 +1,27 @@
 <html>
     <head>
         <style>
-            #dottedmap {
+            .dottedmap {
+                position: absolute;
+                z-index: 1;
                 width: 226px;
                 height: 248px;
                 background: url(spritesheet.png) 0 0;
-              }
+            }
+            .pacman {
+                position: absolute;
+                z-index: 2;
+  				top: 156.5px;
+                left: 30px;
+                width: 15px;
+                height: 15.5px;
+                background: url(spritesheet.png) -453.5px 1px ;
+            }
         </style>
     </head>
     <body>
-        <div id="dottedmap"></div>
+        <div class="dottedmap">
+            <div class="pacman"></div>
+        </div>
     </body>
 </html>

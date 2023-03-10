@@ -1,8 +1,7 @@
-# 7 March 2023
+# 10 March 2023
 
  * DONE
-   * cut the spritesheet using internal CSS `marthige`
-   * a few small improvements to style and implementation `together`
+   * Put the PacMan on top of the labyrinth
 * Mantra
   * Pull before work
   * Make small steps

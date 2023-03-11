@@ -1,6 +1,9 @@
 <html>
     <head>
         <style>
+            body {
+                background-color: black;
+            }
             .dottedmap {
                 position: absolute;
                 z-index: 1;
@@ -17,11 +20,51 @@
                 height: 15.5px;
                 background: url(spritesheet.png) -453.5px 1px ;
             }
+            .redghost {
+                position: absolute;
+                z-index: 2;
+  				top: 84px;
+                left: 105px;
+                width: 15px;
+                height: 15.5px;
+                background: url(spritesheet.png) -457px -64px ;
+            }
+            .pinkghost {
+                position: absolute;
+                z-index: 2;
+  				top: 105px;
+                left: 104px;
+                width: 15px;
+                height: 15.5px;
+                background: url(spritesheet.png) -520px -80px ;
+            }
+            .tealghost {
+                position: absolute;
+                z-index: 2;
+  				top: 108px;
+                left: 88.5px;
+                width: 15px;
+                height: 15.5px;
+                background: url(spritesheet.png) -552px -95.5px ;
+            }
+            .orangeghost {
+                position: absolute;
+                z-index: 2;
+  				top: 108px;
+                left: 119.75px;
+                width: 15px;
+                height: 15.5px;
+                background: url(spritesheet.png) -552px -112px ;
+            }
         </style>
     </head>
     <body>
         <div class="dottedmap">
             <div class="pacman"></div>
+            <div class="redghost"></div>
+            <div class="pinkghost"></div>
+            <div class="tealghost"></div>
+            <div class="orangeghost"></div>
         </div>
     </body>
 </html>

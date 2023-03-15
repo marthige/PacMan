@@ -1,14 +1,14 @@
 body {
   background-color: black;
 }
-.dottedmap {
+#dottedmap {
   position: absolute;
   z-index: 1;
   width: 226px;
   height: 248px;
   background: url(spritesheet.png) 0 0;
 }
-.pacman {
+#pacman {
   position: absolute;
   z-index: 2;
 top: 156.5px;
@@ -17,7 +17,7 @@ top: 156.5px;
   height: 15.5px;
   background: url(spritesheet.png) -453.5px 1px ;
 }
-.redghost {
+#redghost {
   position: absolute;
   z-index: 2;
 top: 84px;
@@ -26,7 +26,7 @@ top: 84px;
   height: 15.5px;
   background: url(spritesheet.png) -457px -64px ;
 }
-.pinkghost {
+#pinkghost {
   position: absolute;
   z-index: 2;
 top: 105px;
@@ -35,7 +35,7 @@ top: 105px;
   height: 15.5px;
   background: url(spritesheet.png) -520px -80px ;
 }
-.tealghost {
+#tealghost {
   position: absolute;
   z-index: 2;
 top: 108px;
@@ -44,7 +44,7 @@ top: 108px;
   height: 15.5px;
   background: url(spritesheet.png) -552px -95.5px ;
 }
-.orangeghost {
+#orangeghost {
   position: absolute;
   z-index: 2;
 top: 108px;

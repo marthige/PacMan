@@ -1,6 +1,8 @@
 // Here we read the keyboard
 document.addEventListener("keydown", (event) => {
     alert(event.key);
+    
+
     // HOMEWORK
     // Implement a very simple movement
     // change pacman to id=

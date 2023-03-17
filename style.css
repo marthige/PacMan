@@ -11,7 +11,7 @@ body {
 #pacman {
   position: absolute;
   z-index: 2;
-top: 156.5px;
+  top: 156.5px;
   left: 30px;
   width: 15px;
   height: 15.5px;
@@ -20,7 +20,7 @@ top: 156.5px;
 #redghost {
   position: absolute;
   z-index: 2;
-top: 84px;
+  top: 84px;
   left: 105px;
   width: 15px;
   height: 15.5px;
@@ -29,7 +29,7 @@ top: 84px;
 #pinkghost {
   position: absolute;
   z-index: 2;
-top: 105px;
+  top: 105px;
   left: 104px;
   width: 15px;
   height: 15.5px;
@@ -38,7 +38,7 @@ top: 105px;
 #tealghost {
   position: absolute;
   z-index: 2;
-top: 108px;
+  top: 108px;
   left: 88.5px;
   width: 15px;
   height: 15.5px;
@@ -47,7 +47,7 @@ top: 108px;
 #orangeghost {
   position: absolute;
   z-index: 2;
-top: 108px;
+  top: 108px;
   left: 119.75px;
   width: 15px;
   height: 15.5px;

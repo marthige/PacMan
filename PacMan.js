@@ -1,16 +1,15 @@
 // Here we read the keyboard
-
 document.addEventListener("keydown", (event) => {
-    pacman =  document.getElementById(pacman);
+    pacman =  document.getElementById('pacman');
     ev = event.code;
     move = { 
-        xy : () => {
+        y : () => {
 
             var y = parseInt(getComputedStyle(pacman).top);
 
             if (ev = 38)
                 --y;
-            else if (k == 40)
+            else if (ev == 40)
                 ++y;
             return y;
         },
@@ -33,8 +32,7 @@ document.addEventListener("keydown", (event) => {
 
 
 
-    //alert(event.key);  shows that key what was clicked
-    // make it MOVE to one side !!
+    //alert(event.key);  detects and shows that key what was clicked
 
    /* switch(event.key) {
         case 37: 

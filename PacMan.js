@@ -28,3 +28,12 @@ document.addEventListener("keydown", (event) => {
     pacman.style.left = (move.x()) + "px";
 
 });
+
+const Mx = 220;
+const  My = 248;
+let arr = new Array(Mx); 
+for (var i = 0; i < Mx; i++) {
+  arr[i] = new Array(My); 
+}
+
+console.log(arr);

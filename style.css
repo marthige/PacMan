@@ -11,11 +11,11 @@ body {
 #pacman {
   position: absolute;
   z-index: 2;
-  top: 156.5px;
-  left: 30px;
-  width: 15px;
-  height: 15.5px;
-  background: url(spritesheet.png) -453.5px 1px ;
+  top: 180px;
+  left: 105px;
+  width: 14px;
+  height: 15px;
+  background: url(spritesheet.png) -454.5px 0.5px ;
 }
 #redghost {
   position: absolute;

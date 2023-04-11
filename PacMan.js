@@ -29,7 +29,8 @@ document.addEventListener("keydown", (event) => {
 
 });
 
-const Mx = 220;
+// here we create the limiting array
+const Mx = 226;
 const  My = 248;
 let arr = new Array(Mx); 
 for (var i = 0; i < Mx; i++) {

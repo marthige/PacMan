@@ -26,11 +26,11 @@ class PacmanChar {
     getNextMove(checkExist) {
         let newPos = this.pos + dir.movement;
         if(checkExist(newPos, objectType.wall) || checkExist(newPos, objectType.ghostlair)) return newPos = this.pos;
-        return {newPos, direction: this.dir};
+        return {newPos, direction: this.dir}; //returns an object with the new position and new direction
     }
 
-    shouldMove() {
-        if(!this.dir) return;
+    shouldMove() { //check if pm should move
+        if(this.dir != null) return; //the default is null, so if it's clicked it starts/has direction
         if(this.timer == this.speed) {
             this.timer = 0;
             return true;

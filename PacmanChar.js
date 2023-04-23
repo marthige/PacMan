@@ -1,4 +1,4 @@
-import { arrows, objectType } from "./functionality";
+/*import { arrows, objectType } from "./functionality";
 
 class PacmanChar {
     constructor(startPos, speed) {
@@ -38,4 +38,4 @@ class PacmanChar {
         this.timer++;
     }
 
-}
+}*/

@@ -31,7 +31,7 @@ document.addEventListener("keydown", (event) => {
 
 console.log(1);
 
-// here we create the limiting array for the map
+/* here we create the limiting array for the map
 export const y = 20;
 export const x = 20;
 export const arrows = {
@@ -84,3 +84,9 @@ export const CLASS_LIST = [
     objectType.pacman,
     objectType.ghostlair,
 ];
+
+export const map = [
+  0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  
+]
+*/

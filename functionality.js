@@ -39,8 +39,8 @@ document.addEventListener("keydown", (event) => {
     ev = event.code;
     var y = parseInt(getComputedStyle(pacman).top);
     var x = parseInt(getComputedStyle(pacman).left);
-    var cRow = 24;
-    var cCol = 14;
+    let cRow = 24;
+    let cCol = 14;
     console.log(map[cRow][cCol]);
     switch(ev) {
       case "ArrowUp":

@@ -14,7 +14,7 @@ const map = [
   [0,0,0,0,0,0,1,0,0,3,3,3,3,0,0,3,3,3,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
-  [3,3,3,3,3,3,1,3,3,3,0,0,0,0,0,0,0,0,3,3,3,1,3,3,3,3,3,3],
+  [5,3,3,3,3,3,1,3,3,3,0,0,0,0,0,0,0,0,3,3,3,1,3,3,3,3,3,5],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,3,3,3,3,3,3,3,3,3,0,0,1,0,0,0,0,0,0],
@@ -33,49 +33,63 @@ const map = [
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ]
 
+//here we define the starting coordinates
+let cRow = 23;
+let cCol = 13;
+
 // Here we read the keyboard
 document.addEventListener("keydown", (event) => {
     pacman =  document.getElementById('pacman');
     ev = event.code;
     var y = parseInt(getComputedStyle(pacman).top);
     var x = parseInt(getComputedStyle(pacman).left);
-    let cRow = 24;
-    let cCol = 14;
     console.log(map[cRow][cCol]);
+
     switch(ev) {
       case "ArrowUp":
-        if(map[cRow][cCol] != 0) {
+        if(map[cRow - 1][cCol] != 0) {
           y = y - 8;
           cRow = cRow - 1;
-          console.log(2);
-        } else {y = y; console.log(3);}
-        break;
+        } else {y = y;}
+      break;
+
       case "ArrowDown":
-        if(map[cRow][cCol] != 0) {
+        if(map[cRow + 1][cCol] != 0) {
           y = y + 8;
           cRow = cRow + 1;
         } else { y = y;}
-        break;
+      break;
+
       case "ArrowLeft":
-        if(map[cRow][cCol] != 0) {
+        if(map[cRow][cCol - 1] != 0) {
           x = x - 8;
           cCol = cCol - 1;
         } else { x = x;}
-        break;
+
+        if(map[cRow][cCol - 1] == 5) {
+          cRow = cRow;
+          cCol = 27;
+        }
+      break;
+
       case "ArrowRight":
-        if(map[cRow][cCol] != 0) {
+        if(map[cRow][cCol + 1] == 5) {
+          cRow = cRow; 
+          cCol = 0;
+          x = x + 8;
+        } else if(map[cRow][cCol + 1] != 0) {
           x = x + 8;
           cCol = cCol + 1;
         } else { x = x;}
-        break;
+       
+      break;
     }
-    
+
     pacman.style.top = y + "px";
     pacman.style.left = x + "px";
 
 });
 
-console.log(1);
 
 /*
 export const y = 20;

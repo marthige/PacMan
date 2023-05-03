@@ -61,22 +61,22 @@ document.addEventListener("keydown", (event) => {
       break;
 
       case "ArrowLeft":
-        if(map[cRow][cCol - 1] != 0) {
+        if(cCol - 1 == 0 && cRow == 14) {
+          cRow = cRow;
+          cCol = 26;
+          x = x + 8*25;
+        } else if(map[cRow][cCol - 1] != 0) {
           x = x - 8;
           cCol = cCol - 1;
         } else { x = x;}
 
-        if(map[cRow][cCol - 1] == 5) {
-          cRow = cRow;
-          cCol = 27;
-        }
       break;
 
       case "ArrowRight":
-        if(map[cRow][cCol + 1] == 5) {
+        if(cRow == 14 && cCol + 1 == 27) {
           cRow = cRow; 
-          cCol = 0;
-          x = x + 8;
+          cCol = 1;
+          x = x - 8*25;
         } else if(map[cRow][cCol + 1] != 0) {
           x = x + 8;
           cCol = cCol + 1;

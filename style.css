@@ -8,9 +8,16 @@ body {
   height: 248px;
   background: url(spritesheet.png) 0 0;
 }
-#pacman {
+#emptymap {
   position: absolute;
   z-index: 2;
+  width: 226px;
+  height: 248px;
+  background: url(spritesheet.png) 452.5px 248px;
+}
+#pacman {
+  position: absolute;
+  z-index: 3;
   top: 180px;
   left: 102px;
   width: 14px;
@@ -19,7 +26,7 @@ body {
 }
 #redghost {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 84px;
   left: 105px;
   width: 15px;
@@ -28,7 +35,7 @@ body {
 }
 #pinkghost {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 105px;
   left: 104px;
   width: 15px;
@@ -37,7 +44,7 @@ body {
 }
 #tealghost {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 108px;
   left: 88.5px;
   width: 15px;
@@ -46,7 +53,7 @@ body {
 }
 #orangeghost {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 108px;
   left: 119.75px;
   width: 15px;

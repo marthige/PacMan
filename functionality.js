@@ -90,6 +90,16 @@ document.addEventListener("keydown", (event) => {
 
 });
 
+if(document.getElementById('dottedmap') != null) {
+  var div = document.getElementById('dottedmap');
+  div.innerHTML +=  '<div id="emptymap"></div>';
+  console.log('not null');
+}
+
+
+
+
+
 
 /*
 export const y = 20;

@@ -84,6 +84,12 @@ document.addEventListener("keydown", (event) => {
        
       break;
     }
+    if(cRow==1 && cCol==1)
+    {
+      var element = document.createElement("div");
+      element.setAttribute("id", "emptymap");
+      document.getElementById('dottedmap').appendChild(element);
+    }
 
     pacman.style.top = y + "px";
     pacman.style.left = x + "px";

@@ -84,23 +84,21 @@ document.addEventListener("keydown", (event) => {
        
       break;
     }
-    if(cRow==1 && cCol==1)
+
+    if(map[cRow][cCol] == 1)
     {
-      var element = document.createElement("div");
-      element.setAttribute("id", "emptymap");
-      document.getElementById('dottedmap').appendChild(element);
+      var element = document.createElement("div"); 
+      element.setAttribute("id", "emptymap"); //connects the element with a css class "emptymap"
+      element.style.top = (y + 0.7) + "px";
+      element.style.left = x + "px";
+      element.style.background = " url(spritesheet.png) 446.5px 230px ";
+      document.getElementById('dottedmap').appendChild(element); //adds the changes made to element to the main id (dottedmap)
     }
 
     pacman.style.top = y + "px";
     pacman.style.left = x + "px";
 
 });
-
-if(document.getElementById('dottedmap') != null) {
-  var div = document.getElementById('dottedmap');
-  div.innerHTML +=  '<div id="emptymap"></div>';
-  console.log('not null');
-}
 
 
 

@@ -2,9 +2,9 @@
 const map = [
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
   [0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0],
-  [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
+  [0,4,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,4,0],
   [0,2,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,2,0],
-  [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
+  [0,4,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,4,0],
   [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
   [0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0],
   [0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0],
@@ -22,8 +22,8 @@ const map = [
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0],
   [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
-  [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
-  [0,2,1,1,0,0,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,0,0,1,1,2,0],
+  [0,4,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,4,0],
+  [0,2,4,1,0,0,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,0,0,1,4,2,0],
   [0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0],
   [0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0],
   [0,1,1,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,1,1,0],
@@ -85,15 +85,22 @@ document.addEventListener("keydown", (event) => {
       break;
     }
 
-    if(map[cRow][cCol] == 1)
-    {
+    if(map[cRow][cCol] == 4) {
+      var element = document.createElement("div"); 
+      element.setAttribute("id", "emptymap"); //connects the element with a css class "emptymap"
+      element.style.top = (y) + "px";
+      element.style.left = (x - 1.5) + "px";
+      element.style.background = " url(spritesheet.png) 446.5px 230px ";
+      document.getElementById('dottedmap').appendChild(element); //adds the changes made to element to the main id (dottedmap)
+    } 
+    else if(map[cRow][cCol] == 1 /*|| map[cRow][cCol] == 2*/) {
       var element = document.createElement("div"); 
       element.setAttribute("id", "emptymap"); //connects the element with a css class "emptymap"
       element.style.top = (y + 0.7) + "px";
       element.style.left = x + "px";
       element.style.background = " url(spritesheet.png) 446.5px 230px ";
       document.getElementById('dottedmap').appendChild(element); //adds the changes made to element to the main id (dottedmap)
-    }
+    }    
 
     pacman.style.top = y + "px";
     pacman.style.left = x + "px";

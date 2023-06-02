@@ -2,9 +2,9 @@
 const map = [
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
   [0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0],
-  [0,4,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,4,0],
+  [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
   [0,2,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,2,0],
-  [0,4,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,4,0],
+  [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
   [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
   [0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0],
   [0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0],
@@ -22,8 +22,8 @@ const map = [
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0],
   [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
-  [0,4,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,4,0],
-  [0,2,4,1,0,0,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,0,0,1,4,2,0],
+  [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
+  [0,2,1,1,0,0,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,0,0,1,1,2,0],
   [0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0],
   [0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0],
   [0,1,1,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,1,1,0],
@@ -37,7 +37,7 @@ const map = [
 let cRow = 23;
 let cCol = 13;
 
-// Here we read the keyboard
+// Here we read the keyboard (works every time a key is pressed)
 document.addEventListener("keydown", (event) => {
     pacman =  document.getElementById('pacman');
     ev = event.code;
@@ -85,27 +85,30 @@ document.addEventListener("keydown", (event) => {
       break;
     }
 
-    if(map[cRow][cCol] == 4) {
+    if(map[cRow][cCol] == 1 /*|| map[cRow][cCol] == 2*/) {
       var element = document.createElement("div"); 
       element.setAttribute("id", "emptymap"); //connects the element with a css class "emptymap"
-      element.style.top = (y) + "px";
-      element.style.left = (x - 1.5) + "px";
+      element.style.top = (y + 3.8) + "px"; // changes (could add too) property of the class
+      element.style.left = (x + 3) + "px";
       element.style.background = " url(spritesheet.png) 446.5px 230px ";
       document.getElementById('dottedmap').appendChild(element); //adds the changes made to element to the main id (dottedmap)
-    } 
-    else if(map[cRow][cCol] == 1 /*|| map[cRow][cCol] == 2*/) {
+    } else if(map[cRow][cCol] == 2) {
       var element = document.createElement("div"); 
       element.setAttribute("id", "emptymap"); //connects the element with a css class "emptymap"
-      element.style.top = (y + 0.7) + "px";
+      element.style.top = (y + 0.8) + "px";
       element.style.left = x + "px";
+      element.style.width = 12.6 + "px"; // makes the black square bigger only for the big dots
+      element.style.height = 13.7 + "px";
       element.style.background = " url(spritesheet.png) 446.5px 230px ";
       document.getElementById('dottedmap').appendChild(element); //adds the changes made to element to the main id (dottedmap)
-    }    
+    }   
 
     pacman.style.top = y + "px";
     pacman.style.left = x + "px";
 
 });
+
+
 
 
 

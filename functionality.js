@@ -108,6 +108,13 @@ document.addEventListener("keydown", (event) => {
 
 });
 
+ 
+redghost = document.getElementById('redghost');
+var Ghy = parseInt(getComputedStyle(redghost).top);
+var Ghx = parseInt(getComputedStyle(redghost).left);
+Ghx = Ghx + 20;
+redghost.style.top = Ghy + "px";
+redghost.style.left = Ghx + 1 + "px";
 
 
 

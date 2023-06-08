@@ -69,7 +69,6 @@ document.addEventListener("keydown", (event) => {
           x = x - 8;
           cCol = cCol - 1;
         } else { x = x;}
-
       break;
 
       case "ArrowRight":
@@ -108,14 +107,15 @@ document.addEventListener("keydown", (event) => {
 
 });
 
- 
-redghost = document.getElementById('redghost');
-var Ghy = parseInt(getComputedStyle(redghost).top);
-var Ghx = parseInt(getComputedStyle(redghost).left);
-Ghx = Ghx + 20;
-redghost.style.top = Ghy + "px";
-redghost.style.left = Ghx + 1 + "px";
-
+for (let i = 0; i < 10; i++) {
+  redghost = document.getElementById('redghost');
+  var Ghy = parseInt(getComputedStyle(redghost).top);
+  var Ghx = parseInt(getComputedStyle(redghost).left);
+  Ghx = Ghx + 20;
+  redghost.style.top = Ghy + "px";
+  redghost.style.left = Ghx + 1 + "px";
+  console.log(22);
+}
 
 
 

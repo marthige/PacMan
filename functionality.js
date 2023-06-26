@@ -11,7 +11,7 @@ const map = [
   [0,1,1,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,1,1,0],
   [0,0,0,0,0,0,1,0,0,0,0,0,3,0,0,3,0,0,0,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,0,0,0,3,0,0,3,0,0,0,0,0,1,0,0,0,0,0,0],
-  [0,0,0,0,0,0,1,0,0,3,3,3,3,0,0,3,3,3,3,0,0,1,0,0,0,0,0,0],
+  [0,0,0,0,0,0,1,0,0,3,3,3,3,3,3,3,3,3,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [5,3,3,3,3,3,1,3,3,3,0,0,0,0,0,0,0,0,3,3,3,1,3,3,3,3,3,5],
@@ -84,7 +84,7 @@ document.addEventListener("keydown", (event) => {
       break;
     }
 
-    if(map[cRow][cCol] == 1 /*|| map[cRow][cCol] == 2*/) {
+    if(map[cRow][cCol] == 1 ) {
       var element = document.createElement("div"); 
       element.setAttribute("id", "emptymap"); //connects the element with a css class "emptymap"
       element.style.top = (y + 3.8) + "px"; // changes (could add too) property of the class
@@ -107,16 +107,25 @@ document.addEventListener("keydown", (event) => {
 
 });
 
-for (let i = 0; i < 10; i++) {
+let rgRow = 11;
+let rgCol = 13;
+function moveRed() {
   redghost = document.getElementById('redghost');
   var Ghy = parseInt(getComputedStyle(redghost).top);
   var Ghx = parseInt(getComputedStyle(redghost).left);
-  Ghx = Ghx + 20;
+  Ghx = Ghx + 8;
+  rgCol = rgCol + 1;
   redghost.style.top = Ghy + "px";
-  redghost.style.left = Ghx + 1 + "px";
-  console.log(22);
+  redghost.style.left = Ghx + "px";
+}
+const myInterval = setInterval(moveRed, 500);
+console.log(rgCol);
+
+function myStop() {
+  clearInterval(myInterval);
 }
 
+if(map[rgRow][rgCol] == 0) {myStop();}
 
 
 

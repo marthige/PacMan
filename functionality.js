@@ -109,23 +109,57 @@ document.addEventListener("keydown", (event) => {
 
 let rgRow = 11;
 let rgCol = 13;
+let move = 8;
+let direction = "right";
 function moveRed() {
   redghost = document.getElementById('redghost');
   var Ghy = parseInt(getComputedStyle(redghost).top);
   var Ghx = parseInt(getComputedStyle(redghost).left);
-  Ghx = Ghx + 8;
-  rgCol = rgCol + 1;
+  if(direction == "down") { 
+    Ghy = Ghy + move; 
+    rgRow = rgRow + 1;
+  }
+  if(direction == "up") { 
+    Ghy = Ghy - move; 
+    rgRow = rgRow - 1;
+  }
+  if(direction == "left") { 
+    Ghx = Ghx - move; 
+    rgCol = rgCol - 1;
+  }
+  if(direction == "right") { 
+    Ghx = Ghx + move; 
+    rgCol = rgCol + 1;
+  }
+ 
+  if(direction == "right") {
+    if(map[rgRow][rgCol+1] == 0) {
+        direction = "down";
+    }
+  }
+  if(direction == "left") {
+    if(map[rgRow][rgCol-1] == 0) {
+        direction = "up";
+    }
+  }
+  if(direction == "up") {
+    if(map[rgRow-1][rgCol] == 0) {
+        direction = "right";
+    }
+  }
+  if(direction == "down") {
+    if(map[rgRow+1][rgCol] == 0) {
+        direction = "left";
+    }
+  }
+  
   redghost.style.top = Ghy + "px";
   redghost.style.left = Ghx + "px";
 }
 const myInterval = setInterval(moveRed, 500);
 console.log(rgCol);
 
-function myStop() {
-  clearInterval(myInterval);
-}
 
-if(map[rgRow][rgCol] == 0) {myStop();}
 
 
 

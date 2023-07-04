@@ -111,6 +111,7 @@ let rgRow = 11;
 let rgCol = 13;
 let move = 8;
 let direction = "right";
+let x = 0;
 function moveRed() {
   redghost = document.getElementById('redghost');
   var Ghy = parseInt(getComputedStyle(redghost).top);
@@ -134,36 +135,49 @@ function moveRed() {
  
   if(direction == "right") {
     if(map[rgRow][rgCol+1] == 0) {
-      if(map[rgRow+1][rgCol] == 0) {
-        direction = "up";
+      if(map[rgRow][rgCol] == 5) {
+          x = Math.floor((Math.random() * 2)+1);
+          console.log(x);
+          if(x == 2) direction == "left";
+          else if(x == 1) direction == "up";
       } else direction = "down";
     }
   }
   if(direction == "left") {
     if(map[rgRow][rgCol-1] == 0) {
-      if(map[rgRow-1][rgCol] == 0) {
-        direction = "down";
+      if(map[rgRow][rgCol] == 5) {
+          x = Math.floor((Math.random() * 2)+1);
+          console.log(x);
+          if(x == 2) direction == "right";
+          else if(x == 1) direction == "down";
       } else direction = "up";
     }
   }
   if(direction == "up") {
     if(map[rgRow-1][rgCol] == 0) {
-      if(map[rgRow][rgCol+1] == 0) {
-        direction = "left";
+      if(map[rgRow][rgCol] == 5) {
+          x = Math.floor((Math.random() * 2)+1);
+          console.log(x);
+          if(x == 2) direction == "left";
+          else if(x == 1) direction == "down";}
       } else direction = "right";
     }
   }
   if(direction == "down") {
     if(map[rgRow+1][rgCol] == 0) {
-      if(map[rgRow][rgCol-1] == 0) {
-        direction = "right";
+      if(map[rgRow][rgCol] == 5) {
+          x = Math.floor((Math.random() * 2)+1);
+          console.log(x);
+          if(x == 2) direction == "up";
+          else if(x == 1) direction == "right";
       } else direction = "left";
-    }
+    } 
   }
   
   redghost.style.top = Ghy + "px";
   redghost.style.left = Ghx + "px";
 }
+
 const myInterval = setInterval(moveRed, 500);
 console.log(rgCol);
 

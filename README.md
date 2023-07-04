@@ -1,8 +1,10 @@
-# 28 June 2023
+# 04 July 2023
 
 * Today
-  * fixed the stopping command for the ghost by moving it in the repeated function
-  * made the ghost not stop, but turn right when he hits a wall
+  * made the ghost turn right when he hits a wall or the opposite if he can't go left
+  * researched the random function
+  * made the ghost turn all the other directions except a wall when he goes on a cross-section with randomly choosing '1' or '2'
+
 
 * Mantra
   * Divide and conquer.
@@ -13,6 +15,6 @@
   * https://dahoum.wales/the-pacman-as-a-nursery-32ba07b282b1
 
 * Homework/next steps
-  * -> develop the code so it doesnt move in only right
-  * -> make the ghosts move by changing(.style.top/left) their y and x through a RANDOM function on cross-sections (change the numbers on the map)
+  * fix the error
+  * ( -> make the ghosts move by changing(.style.top/left) their y and x through a RANDOM function on cross-sections )
   * -> make the big dots influence everyone

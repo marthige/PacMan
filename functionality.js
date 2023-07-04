@@ -135,28 +135,28 @@ function moveRed() {
   if(direction == "right") {
     if(map[rgRow][rgCol+1] == 0) {
       if(map[rgRow+1][rgCol] == 0) {
-        direction = "left";
+        direction = "up";
       } else direction = "down";
     }
   }
   if(direction == "left") {
     if(map[rgRow][rgCol-1] == 0) {
       if(map[rgRow-1][rgCol] == 0) {
-        direction = "right";
+        direction = "down";
       } else direction = "up";
     }
   }
   if(direction == "up") {
     if(map[rgRow-1][rgCol] == 0) {
       if(map[rgRow][rgCol+1] == 0) {
-        direction = "down";
+        direction = "left";
       } else direction = "right";
     }
   }
   if(direction == "down") {
     if(map[rgRow+1][rgCol] == 0) {
       if(map[rgRow][rgCol-1] == 0) {
-        direction = "up";
+        direction = "right";
       } else direction = "left";
     }
   }

@@ -159,7 +159,7 @@ function moveRed() {
           x = Math.floor((Math.random() * 2)+1);
           console.log(x);
           if(x == 2) direction == "left";
-          else if(x == 1) direction == "down";}
+          else if(x == 1) direction == "down";
       } else direction = "right";
     }
   }

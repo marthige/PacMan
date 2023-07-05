@@ -137,9 +137,12 @@ function moveRed() {
     if(map[rgRow][rgCol+1] == 0) {
       if(map[rgRow][rgCol] == 5) {
           x = Math.floor((Math.random() * 2)+1);
-          console.log(x);
+          console.log(x + " right");
           if(x == 2) direction == "left";
           else if(x == 1) direction == "up";
+      } 
+      if(map[rgRow+1][rgCol] == 0) {
+        direction = "up";
       } else direction = "down";
     }
   }
@@ -147,9 +150,12 @@ function moveRed() {
     if(map[rgRow][rgCol-1] == 0) {
       if(map[rgRow][rgCol] == 5) {
           x = Math.floor((Math.random() * 2)+1);
-          console.log(x);
+          console.log(x + " left");
           if(x == 2) direction == "right";
           else if(x == 1) direction == "down";
+      } 
+      if(map[rgRow-1][rgCol] == 0) {
+        direction = "down";
       } else direction = "up";
     }
   }
@@ -157,9 +163,12 @@ function moveRed() {
     if(map[rgRow-1][rgCol] == 0) {
       if(map[rgRow][rgCol] == 5) {
           x = Math.floor((Math.random() * 2)+1);
-          console.log(x);
+          console.log(x + " up");
           if(x == 2) direction == "left";
           else if(x == 1) direction == "down";
+      } 
+      if(map[rgRow][rgCol+1] == 0) {
+        direction = "left";
       } else direction = "right";
     }
   }
@@ -167,9 +176,12 @@ function moveRed() {
     if(map[rgRow+1][rgCol] == 0) {
       if(map[rgRow][rgCol] == 5) {
           x = Math.floor((Math.random() * 2)+1);
-          console.log(x);
+          console.log(x + " down");
           if(x == 2) direction == "up";
           else if(x == 1) direction == "right";
+      } 
+      if(map[rgRow][rgCol-1] == 0) {
+        direction = "right";
       } else direction = "left";
     } 
   }

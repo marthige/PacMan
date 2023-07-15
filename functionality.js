@@ -137,52 +137,56 @@ function moveRed() {
     if(map[rgRow][rgCol+1] == 0) {
       if(map[rgRow][rgCol] == 5) {
           x = Math.floor((Math.random() * 2)+1);
-          console.log(x + " right");
-          if(x == 2) direction == "left";
-          else if(x == 1) direction == "up";
-      } 
-      if(map[rgRow+1][rgCol] == 0) {
+          //console.log(x + " right");
+          if(x == 2) {direction == "left"; console.log("rndmRight2");}
+          else if(x == 1) {direction == "up"; console.log("rndmRight1");}
+          else if(x == 3) {direction == "down"; console.log("rndmRight3");}
+      } else if(map[rgRow+1][rgCol] == 0) {
         direction = "up";
-      } else direction = "down";
+        console.log("Is it right -> up?");
+      } else {direction = "down"; console.log("Is it right -> down?");}
     }
   }
   if(direction == "left") {
     if(map[rgRow][rgCol-1] == 0) {
       if(map[rgRow][rgCol] == 5) {
-          x = Math.floor((Math.random() * 2)+1);
-          console.log(x + " left");
-          if(x == 2) direction == "right";
-          else if(x == 1) direction == "down";
-      } 
-      if(map[rgRow-1][rgCol] == 0) {
+          x = Math.floor((Math.random() * 3)+1);
+          //console.log(x + " left");
+          if(x == 2) {direction == "right"; console.log("rndmLeft2");}
+          else if(x == 1) {direction == "down"; console.log("rndmLeft1");}
+          else if(x == 3) {direction == "up"; console.log("rndmLeft3");}
+      } else if(map[rgRow-1][rgCol] == 0) {
         direction = "down";
-      } else direction = "up";
+        console.log("Is it left -> down?");
+      } else {direction = "up"; console.log("Is it left -> up?");}
     }
   }
   if(direction == "up") {
     if(map[rgRow-1][rgCol] == 0) {
       if(map[rgRow][rgCol] == 5) {
-          x = Math.floor((Math.random() * 2)+1);
-          console.log(x + " up");
-          if(x == 2) direction == "left";
-          else if(x == 1) direction == "down";
-      } 
-      if(map[rgRow][rgCol+1] == 0) {
+          x = Math.floor((Math.random() * 3)+1);
+          //console.log(x + " up");
+          if(x == 2) {direction == "left"; console.log("rndmUp2");}
+          else if(x == 1) {direction == "down"; console.log("rndmUp1");}
+          else if(x == 3) {direction == "right"; console.log("rndmUp3");}
+      } else if(map[rgRow][rgCol+1] == 0) {
         direction = "left";
-      } else direction = "right";
+        console.log("Is it up -> left?");
+      } else {direction = "right"; console.log("Is it up -> right?");}
     }
   }
   if(direction == "down") {
     if(map[rgRow+1][rgCol] == 0) {
       if(map[rgRow][rgCol] == 5) {
-          x = Math.floor((Math.random() * 2)+1);
-          console.log(x + " down");
-          if(x == 2) direction == "up";
-          else if(x == 1) direction == "right";
-      } 
-      if(map[rgRow][rgCol-1] == 0) {
+          x = Math.floor((Math.random() * 3)+1);
+         // console.log(x + " down");
+          if(x == 2) {direction == "up"; console.log("rndmDown2");}
+          else if(x == 1) {direction == "right"; console.log("rndmDown1");}
+          else if(x == 3) {direction == "left"; console.log("rndmDown3");}
+      } else if(map[rgRow][rgCol-1] == 0) {
         direction = "right";
-      } else direction = "left";
+        console.log("Is it down -> right?");
+      } else {direction = "left"; console.log("Is it down -> left?");}
     } 
   }
   

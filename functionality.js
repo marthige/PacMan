@@ -1,35 +1,35 @@
 // here we create the limiting array for the map
 const map = [
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,1,1,1,1,1,5,1,1,1,1,1,1,0,0,1,1,1,1,1,1,5,1,1,1,1,1,0],
+  [0,5,1,1,1,1,5,1,1,1,1,1,5,0,0,5,1,1,1,1,1,5,1,1,1,1,5,0],
   [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
   [0,2,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,2,0],
   [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
   [0,5,1,1,1,1,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1,1,1,5,0],
   [0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0],
   [0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0],
-  [0,1,1,1,1,1,5,0,0,1,1,1,1,0,0,1,1,1,1,0,0,5,1,1,1,1,1,0],
+  [0,5,1,1,1,1,5,0,0,5,1,1,5,0,0,5,1,1,5,0,0,5,1,1,1,1,5,0],
   [0,0,0,0,0,0,1,0,0,0,0,0,3,0,0,3,0,0,0,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,0,0,0,3,0,0,3,0,0,0,0,0,1,0,0,0,0,0,0],
-  [0,0,0,0,0,0,1,0,0,3,3,3,3,3,3,3,3,3,3,0,0,1,0,0,0,0,0,0],
+  [0,0,0,0,0,0,1,0,0,5,3,3,5,3,3,5,3,3,5,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
-  [5,3,3,3,3,3,5,3,3,3,0,0,0,0,0,0,0,0,3,3,3,5,3,3,3,3,3,5],
+  [5,3,3,3,3,3,5,3,3,5,0,0,0,0,0,0,0,0,5,3,3,5,3,3,3,3,3,5],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
-  [0,0,0,0,0,0,1,0,0,3,3,3,3,3,3,3,3,3,3,0,0,1,0,0,0,0,0,0],
+  [0,0,0,0,0,0,1,0,0,5,3,3,3,3,3,3,3,3,5,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
   [0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,0,0,0],
-  [0,1,1,1,1,1,5,1,1,1,1,1,1,0,0,1,1,1,1,1,1,5,1,1,1,1,1,0],
+  [0,5,1,1,1,1,5,1,1,5,1,1,5,0,0,5,1,1,5,1,1,5,1,1,1,1,5,0],
   [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
   [0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0],
-  [0,2,1,1,0,0,5,1,1,5,1,1,1,3,3,1,1,1,5,1,1,5,0,0,1,1,2,0],
+  [0,2,1,5,0,0,5,1,1,5,1,1,5,3,3,5,1,1,5,1,1,5,0,0,5,1,2,0],
   [0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0],
   [0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0],
-  [0,1,1,5,1,1,1,0,0,1,1,1,1,0,0,1,1,1,1,0,0,1,1,1,5,1,1,0],
+  [0,5,1,5,1,1,1,0,0,5,1,1,5,0,0,5,1,1,5,0,0,1,1,1,5,1,5,0],
   [0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0],
   [0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0],
-  [0,1,1,1,1,1,1,1,1,1,1,1,5,1,1,5,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,5,1,1,1,1,1,1,1,1,1,1,5,1,1,5,1,1,1,1,1,1,1,1,1,1,5,0],
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ]
 
@@ -84,6 +84,7 @@ document.addEventListener("keydown", (event) => {
       break;
     }
 
+    // here the pacman eats the dots
     if(map[cRow][cCol] == 1 ) {
       var element = document.createElement("div"); 
       element.setAttribute("id", "emptymap"); //connects the element with a css class "emptymap"
@@ -107,11 +108,13 @@ document.addEventListener("keydown", (event) => {
 
 });
 
+// here the ghost moves randomly
 let rgRow = 11;
 let rgCol = 13;
 let move = 8;
 let direction = "right";
 let x = 0;
+let check = 0;
 function moveRed() {
   redghost = document.getElementById('redghost');
   var Ghy = parseInt(getComputedStyle(redghost).top);
@@ -133,61 +136,154 @@ function moveRed() {
     rgCol = rgCol + 1;
   }
  
+  check = 0;
   if(direction == "right") {
-    if(map[rgRow][rgCol+1] == 0) {
-      if(map[rgRow][rgCol] == 5) {
-          x = Math.floor((Math.random() * 2)+1);
-          //console.log(x + " right");
-          if(x == 2) {direction == "left"; console.log("rndmRight2");}
-          else if(x == 1) {direction == "up"; console.log("rndmRight1");}
-          else if(x == 3) {direction == "down"; console.log("rndmRight3");}
-      } else if(map[rgRow+1][rgCol] == 0) {
-        direction = "up";
-        console.log("Is it right -> up?");
-      } else {direction = "down"; console.log("Is it right -> down?");}
+    if(map[rgRow][rgCol] == 5 && check == 0) {
+      x = Math.floor((Math.random() * 4)+1);
+      check = 1;
+      if(x == 1) {
+        direction = "left"; 
+        console.log("rndmRight1");
+      }
+      else if(x == 2) {
+        direction = "up"; 
+        console.log("rndmRight2");
+      }
+      else if(x == 3) {
+        direction = "down"; 
+        console.log("rndmRight3");
+      }
+      else if(x == 4) {
+        direction = "right"; 
+        console.log("rndmRight4");
+      }
     }
+    if(map[rgRow][rgCol+1] == 0) {
+      x = Math.floor((Math.random() * 3)+1);
+      if(x == 1) {
+        direction = "left"; 
+        console.log("00rndmRight1");
+      }
+      else if(x == 2) {
+        direction = "up"; 
+        console.log("00rndmRight2");
+      }
+      else if(x == 3) {
+        direction = "down"; 
+        console.log("00rndmRight3");
+      }
+    } 
   }
   if(direction == "left") {
-    if(map[rgRow][rgCol-1] == 0) {
-      if(map[rgRow][rgCol] == 5) {
-          x = Math.floor((Math.random() * 3)+1);
-          //console.log(x + " left");
-          if(x == 2) {direction == "right"; console.log("rndmLeft2");}
-          else if(x == 1) {direction == "down"; console.log("rndmLeft1");}
-          else if(x == 3) {direction == "up"; console.log("rndmLeft3");}
-      } else if(map[rgRow-1][rgCol] == 0) {
-        direction = "down";
-        console.log("Is it left -> down?");
-      } else {direction = "up"; console.log("Is it left -> up?");}
+    if(map[rgRow][rgCol] == 5 && check == 0) {
+      x = Math.floor((Math.random() * 4)+1);
+      check = 1;
+      if(x == 1) {
+        direction = "left"; 
+        console.log("rndmLeft1");
+      }
+      else if(x == 2) {
+        direction = "up"; 
+        console.log("rndmLeft2");
+      }
+      else if(x == 3) {
+        direction = "down"; 
+        console.log("rndmLeft3");
+      }
+      else if(x == 4) {
+        direction = "right"; 
+        console.log("rndmLeft4");
+      }
+    }
+    if(map[rgRow][rgCol+1] == 0) {
+      x = Math.floor((Math.random() * 3)+1);
+      if(x == 1) {
+        direction = "right"; 
+        console.log("00rndmLeft1");
+      }
+      else if(x == 2) {
+        direction = "up"; 
+        console.log("00rndmLeft2");
+      }
+      else if(x == 3) {
+        direction = "down"; 
+        console.log("00rndmLeft3");
+      }
     }
   }
   if(direction == "up") {
+    if(map[rgRow][rgCol] == 5 && check == 0) {
+      x = Math.floor((Math.random() * 4)+1);
+      check = 1;
+      if(x == 1) {
+        direction = "left"; 
+        console.log("rndmUp1");
+      }
+      else if(x == 2) {
+        direction = "up"; 
+        console.log("rndmUp2");
+      }
+      else if(x == 3) {
+        direction = "down"; 
+        console.log("rndmUp3");
+      }
+      else if(x == 4) {
+        direction = "right"; 
+        console.log("rndmUp4");
+      }
+    }
     if(map[rgRow-1][rgCol] == 0) {
-      if(map[rgRow][rgCol] == 5) {
-          x = Math.floor((Math.random() * 3)+1);
-          //console.log(x + " up");
-          if(x == 2) {direction == "left"; console.log("rndmUp2");}
-          else if(x == 1) {direction == "down"; console.log("rndmUp1");}
-          else if(x == 3) {direction == "right"; console.log("rndmUp3");}
-      } else if(map[rgRow][rgCol+1] == 0) {
-        direction = "left";
-        console.log("Is it up -> left?");
-      } else {direction = "right"; console.log("Is it up -> right?");}
+      x = Math.floor((Math.random() * 3)+1);
+      if(x == 1) {
+        direction = "right"; 
+        console.log("00rndmUp1");
+      }
+      else if(x == 2) {
+        direction = "left"; 
+        console.log("00rndmUp2");
+      }
+      else if(x == 3) {
+        direction = "down"; 
+        console.log("00rndmUp3");
+      }
     }
   }
   if(direction == "down") {
+    if(map[rgRow][rgCol] == 5 && check == 0) {
+      x = Math.floor((Math.random() * 4)+1);
+      check = 1;
+      if(x == 1) {
+        direction = "left"; 
+        console.log("rndmDown1");
+      }
+      else if(x == 2) {
+        direction = "up"; 
+        console.log("rndmDown2");
+      }
+      else if(x == 3) {
+        direction = "down"; 
+        console.log("rndmDown3");
+      }
+      else if(x == 4) {
+        direction = "own"; 
+        console.log("rndmDown4");
+      }
+    }
     if(map[rgRow+1][rgCol] == 0) {
-      if(map[rgRow][rgCol] == 5) {
-          x = Math.floor((Math.random() * 3)+1);
-         // console.log(x + " down");
-          if(x == 2) {direction == "up"; console.log("rndmDown2");}
-          else if(x == 1) {direction == "right"; console.log("rndmDown1");}
-          else if(x == 3) {direction == "left"; console.log("rndmDown3");}
-      } else if(map[rgRow][rgCol-1] == 0) {
-        direction = "right";
-        console.log("Is it down -> right?");
-      } else {direction = "left"; console.log("Is it down -> left?");}
-    } 
+      x = Math.floor((Math.random() * 3)+1);
+      if(x == 1) {
+        direction = "right"; 
+        console.log("00rndmDown1");
+      }
+      else if(x == 2) {
+        direction = "up"; 
+        console.log("00rndmDown2");
+      }
+      else if(x == 3) {
+        direction = "left"; 
+        console.log("00rndmDown3");
+      }
+    }
   }
   
   redghost.style.top = Ghy + "px";
